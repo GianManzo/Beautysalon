@@ -1,0 +1,45 @@
+#contact .container__contact a{
+    height: 3.5rem;
+    width: 15em;
+}
+#contact .container__contact a i{
+    font-size: 1.5rem;
+    margin-right: 0.625rem;
+   
+}
+
+#contact .container__contact a:hover i{
+   font-size: 1.520rem;
+}
+
+.sectionContact__text h2{
+    max-width: 17rem;
+}
+.container__contact p{
+    max-width: 20rem;
+}
+
+.infos i{
+    color: var(--base-color);
+    font-size: 1.5rem;
+    margin-right: 0.625rem;
+}
+
+.infos .infos__ul li{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center; 
+}
+@media screen and (min-width: 992px) {
+    .container__contact{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .sectionContact__text h2{
+        max-width: 25rem;
+    }
+    .container__contact p{
+        max-width: 22rem;
+    }
+}

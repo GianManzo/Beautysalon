@@ -1,0 +1,25 @@
+.container__about{
+    text-align: start;
+}
+
+.imgAbout{
+    box-shadow: -4rem -1.6rem var(--base-color-second);
+    width: 100%;
+}
+.section__about{
+    background: #ffffff;
+}
+.dividerInvert{
+    background: var(--gradient-dividerInvert);
+    height: 1px;
+    margin-bottom: 5rem;
+    width: 100%;
+}
+@media screen and (min-width: 992px) {
+    .section__about .grid{
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+    }
+}
+

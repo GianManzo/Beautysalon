@@ -1,0 +1,72 @@
+#home{
+    margin-top: 10rem;
+    margin-bottom: 4rem;
+}
+
+.container__img--img{
+    border-radius: 0.25rem;
+    box-shadow: 4rem -3rem var(--base-color-second);
+    height: auto;
+    position: relative;/*abilita o rigth abaixo*/
+    right: 2rem;
+    width: 100%;
+}
+
+.grid{/*nao tenho mais a class grid nos container por conta do carousel que bugava com grid*/
+    display: grid;
+    gap: 2rem;
+}
+
+.container__text{
+    text-align: center;
+    width: 100%;
+}
+
+.container__text--title{
+    margin-bottom: 2rem;  
+}
+
+.container__text--text{
+    font-size: var(--subtitle-font-size);
+    line-height: 1.7rem;
+    margin-bottom: 2rem;
+}
+
+.container__text--btn{
+    align-items: center;
+    background-color: var(--base-color);
+    border-radius: 0.25rem;
+    color: var(--text-color-light);
+    display: inline-flex;
+    font: 500 var(--subtitle-font-size) var(--body-font);
+    height: 3.125rem;
+    padding: 0 2rem;
+    transition: 200ms;
+}
+
+.container__text--btn:hover{
+    background: var(--base-color-alt);
+    cursor: pointer;
+    font-size: 1.03rem;
+}
+
+.divider{
+    background: var(--gradient-divider);
+    height: 1px;
+    margin-bottom: 5rem;
+    width: 100%;
+}
+@media screen and (min-width: 992px) {
+    
+    #home .container{
+        display: flex;
+        flex-direction: row-reverse;
+        
+    }
+    #home .container__text{
+        text-align: start;
+        
+    }
+   
+    
+}

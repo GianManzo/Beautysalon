@@ -1,0 +1,72 @@
+:root {
+  --header-height: 4.5rem;
+
+  /* colors */
+  --hue: 600;
+  /* HSL color mode */
+  --base-color: hsl(var(--hue) 36% 57%);
+  --base-color-second: hsl(var(--hue) 65% 88%);
+  --base-color-alt: hsl(var(--hue) 57% 53%);
+  --title-color: hsl(var(--hue) 41% 10%);
+  --text-color: hsl(0 0% 46%);
+  --text-color-light: hsl(0 0% 98%);
+  --body-color: hsl(0 0% 98%);
+  --gradient-divider: linear-gradient(
+    270deg,
+    #69b99d 0%,
+    rgba(204, 244, 230, 0.34) 100%
+  );
+  --gradient-dividerInvert: linear-gradient(
+    270deg,
+    rgba(204, 244, 230, 0.34),
+    #69b99d
+  );
+  /* fonts */
+  --title-font-size: 1.875rem;
+  --subtitle-font-size: 1rem;
+
+  --title-font: 'Poppins', sans-serif;
+  --body-font: 'DM Sans', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--body-color);
+  color: var(--text-color);
+  font: 400 var(--subtitle-font-size) var(--body-font);
+  -webkit-font-smoothing: antialiased;
+}
+
+.title {
+  color: var(--title-color);
+  font: 700 var(--title-font-size) var(--title-font);
+}
+main {
+  margin-top: calc(var(--header-height) + 2rem);
+}
+.container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+@media screen and (min-width: 992px) {
+  :root {
+    --title-font-size: 2.25rem;
+    --subtitle: 1.125rem;
+  }
+  .subtitle {
+    font-size: var(--subtitle);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    margin-left: 7.6rem;
+    margin-right: 7.6rem;
+  }
+}

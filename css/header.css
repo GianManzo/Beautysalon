@@ -1,0 +1,132 @@
+.header__nav{
+    align-items: center;
+    background: var(--body-color);
+    border-bottom: 1px solid #e4e4e4;
+    display: flex;
+    height: var(--header-height);
+    justify-content: space-between;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.header__nav.scroll{/*quando js colocar o .scroll*/
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .15);
+}
+
+.header__nav--logo{
+    color: var(--title-color);
+    font: 700 1.31rem 'Popins', sans-serif;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.header__nav--logo span{
+    color: var(--base-color);
+}
+
+.header__nav--menu{/*quando o menu mobile nao estiver aberto*/
+    visibility: hidden;
+    top: -20rem;
+    transition: 200ms;
+}
+.header__ul{/*quando esta sem a class show a ul não aparece*/
+    display: none;
+}
+.show .header__ul{
+    display: grid;
+}
+
+.header__ul--a{
+    position: relative;
+    transition: color 800ms;
+}
+
+.header__ul--a::after{/*coloca um html no elemento*/
+    background: var(--base-color);
+    bottom: -1.5rem;
+    content: '';
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transition: width 800ms;
+    width: 0%;/*mas deixa zerado para so aparecere quando hover*/
+}
+
+.header__ul--a:hover{
+    color: var(--base-color);
+}
+
+.header__ul--a:hover::after{
+    width: 100%;
+}
+
+nav.show .header__nav--menu{/*o nav.show junto, eh para procurar o .show na nav*/
+    align-items: center;
+    background: var(--body-color);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    visibility: visible;
+    width: 100vw;
+}
+
+nav.show ul.grid{/*quando o js colocar a classe show*/ 
+    gap: 4rem;
+}
+
+/*ICON X E MENU*/
+
+.toggle{
+    color: var(--base-color);
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+nav .icon-close{
+    opacity: 0;
+    right: 1.5rem;
+    position: absolute;
+    top: -1.5rem;/*animação do close*/
+    transition: 80ms;/*timer ta animação quie vem de cima*/
+    visibility: hidden;
+}
+nav .icon-menu{
+    position: absolute;
+    right: 1.5rem;/*animação do close*/
+}
+nav.show div.icon-menu{
+    visibility: hidden;
+}
+nav.show div.icon-close{
+    opacity: 1;
+    top: 1.5rem;
+    visibility: visible;
+}
+@media screen and (min-width: 1200px) { 
+   .header__nav{
+       justify-content: space-evenly;
+   }
+    .header__nav--menu{
+        opacity: 1;
+        top: 0;
+        visibility: visible;
+    }  
+    .header__ul{
+        display: flex;
+        gap: 2rem;
+    }  
+    .header__ul a{
+        font: 400 1rem var(--body-font);
+    }
+    nav .icon-menu{
+        display: none;
+    }
+    
+}
